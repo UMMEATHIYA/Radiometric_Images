@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.props" Condition="Exists('..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{201D7275-A0EB-43E6-84AB-9EBCF35E0B63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Radiometric_Images</RootNamespace>
+    <AssemblyName>Radiometric_Images</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flir.Atlas.Gigevision, Version=1.0.0.0, Culture=neutral, PublicKeyToken=caa391fd8e07c76b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\lib\net452\Flir.Atlas.Gigevision.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.Atlas.Image, Version=7.0.0.0, Culture=neutral, PublicKeyToken=caa391fd8e07c76b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\lib\net452\Flir.Atlas.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.Atlas.Live, Version=7.0.0.0, Culture=neutral, PublicKeyToken=caa391fd8e07c76b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\lib\net452\Flir.Atlas.Live.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.Cronos.Common, Version=2.0.14266.1000, Culture=neutral, PublicKeyToken=caa391fd8e07c76b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\win-x86\lib\Flir.Cronos.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.Cronos.Filter">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\win-x86\lib\Flir.Cronos.Filter.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.Cronos.Filter.Adapter">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\win-x86\lib\Flir.Cronos.Filter.Adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.FormatPlugin.IRSDK">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\win-x86\lib\Flir.FormatPlugin.IRSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Flir.FormatPlugin.PTW">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\win-x86\lib\Flir.FormatPlugin.PTW.dll</HintPath>
+    </Reference>
+    <Reference Include="FLIRCommunicationsAdapter">
+      <HintPath>..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\win-x86\lib\FLIRCommunicationsAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataExtractor\Enums.cs" />
+    <Compile Include="DataExtractor\ImageProcessor.cs" />
+    <Compile Include="DataExtractor\Models\CameraInfo.cs" />
+    <Compile Include="DataExtractor\Models\ThermalParameters.cs" />
+    <Compile Include="DataExtractor\Models\ThermalData.cs" />
+    <Compile Include="DataExtractor\Models\GpsInfo.cs" />
+    <Compile Include="DataExtractor\Models\FlirImage.cs" />
+    <Compile Include="DataExtractor\Models\CompassInfo.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_20000115_102046_320.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.props'))" />
+    <Error Condition="!Exists('..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.targets'))" />
+  </Target>
+  <Import Project="..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.targets" Condition="Exists('..\packages\Flir.Atlas.Cronos.7.0.1\build\net452\Flir.Atlas.Cronos.targets')" />
+</Project>
