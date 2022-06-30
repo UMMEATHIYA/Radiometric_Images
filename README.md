@@ -31,6 +31,11 @@
 ![img_20000120_113342_646](https://user-images.githubusercontent.com/43459908/173294395-a4518884-b952-4ca7-a6c1-e14db638a185.jpg)
 ![img_20000120_114645_574](https://user-images.githubusercontent.com/43459908/173294411-78d6b158-c0d2-4766-849d-b3a207041e31.jpg)
 ![img_20000120_115221_193](https://user-images.githubusercontent.com/43459908/173294443-c1bfa9ce-760e-4d77-874e-16ee861e100b.jpg)
+![img_20000211_100030_607](https://user-images.githubusercontent.com/43459908/176684870-d5dba1b6-9ec6-4478-9566-e27089dff251.jpg)
+![img_20000211_100046_927](https://user-images.githubusercontent.com/43459908/176684880-f288c4be-2f40-4efc-b6ba-56a442d4486a.jpg)
+![img_20000211_101456_862](https://user-images.githubusercontent.com/43459908/176684914-2d29a7b6-2205-468b-82a0-f71960ee23a1.jpg)
+![img_20000211_101507_582](https://user-images.githubusercontent.com/43459908/176684918-afc1f265-098c-4c76-ac74-fc73c9ebbdb5.jpg)
+
 
   <li> JSON OUTPUT </li>
   <img width="389" alt="image1" src="https://user-images.githubusercontent.com/43459908/171226500-9aee362e-0da5-49ef-9ccc-0e6ba8cd84f6.PNG">
